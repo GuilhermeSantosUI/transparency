@@ -57,17 +57,26 @@ function Frame({ children }: FrameProps) {
         <C.Group>
           <C.Main>{children}</C.Main>
           <C.Utils>
-            <p>Links Uteis</p>
+            <header
+              style={{
+                position: 'sticky',
+                display: 'flex',
+                flexFlow: 'column',
+                gap: 10,
+                top: 30,
+              }}>
+              <p>Links Uteis</p>
 
-            <Link to="">
-              IBGE <ArrowRight size={12} />
-            </Link>
-            <Link to="">
-              E-mail <ArrowRight size={12} />
-            </Link>
-            <Link to="">
-              Banese <ArrowRight size={12} />
-            </Link>
+              <Link to="">
+                IBGE <ArrowRight size={12} />
+              </Link>
+              <Link to="">
+                E-mail <ArrowRight size={12} />
+              </Link>
+              <Link to="">
+                Banese <ArrowRight size={12} />
+              </Link>
+            </header>
           </C.Utils>
         </C.Group>
       </C.Content>

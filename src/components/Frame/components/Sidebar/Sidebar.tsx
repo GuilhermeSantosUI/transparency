@@ -47,7 +47,7 @@ function Sidebar() {
           <Bank size={18} /> Legislação
         </Link>
 
-        <Link to="">
+        <Link to="esic">
           <AppWindow size={18} /> eSIC
         </Link>
 
