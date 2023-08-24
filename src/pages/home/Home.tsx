@@ -1,5 +1,4 @@
 import {
-  ArrowsOutLineVertical,
   CalendarBlank,
   CaretDoubleLeft,
   CaretDoubleRight,

@@ -1,15 +1,13 @@
 import {
-  ArrowDown,
   ArrowRight,
   CaretDown,
-  CaretRight,
   CircleHalf,
   Translate,
 } from '@phosphor-icons/react';
 import * as C from './Frame.styles';
 
-import Sidebar from './components/Sidebar/Sidebar';
 import { Link } from 'react-router-dom';
+import Sidebar from './components/Sidebar/Sidebar';
 
 type FrameProps = {
   children: React.ReactNode;
