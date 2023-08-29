@@ -113,11 +113,6 @@ function Expense() {
             plugins: {
               legend: {
                 display: false,
-                labels: {
-                  font: {
-                    family: 'Bricolage Grotesque',
-                  },
-                },
               },
               title: {
                 display: false,

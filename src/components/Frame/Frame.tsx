@@ -4,20 +4,34 @@ import {
   CircleHalf,
   Translate,
 } from '@phosphor-icons/react';
+import { useEffect, useRef } from 'react';
 import * as C from './Frame.styles';
 
 import { Link } from 'react-router-dom';
-import Sidebar from './components/Sidebar/Sidebar';
+import useModal from '../../hooks/modal';
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import Modal from '../Modal';
-import useModal from '../../hooks/modal';
+import Sidebar from './components/Sidebar/Sidebar';
 
 type FrameProps = {
   children: React.ReactNode;
 };
 
 function Frame({ children }: FrameProps) {
+  const inputRef = useRef<HTMLInputElement>(null);
   const { isShown, handleSwitch } = useModal();
+
+  /* const keyDownHandler = (e: KeyboardEvent) => {
+    e.preventDefault();
+
+    if (e.altKey && e.key === 'k') {
+      inputRef.current?.click();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', keyDownHandler);
+  }); */
 
   return (
     <C.Container>
@@ -33,7 +47,13 @@ function Frame({ children }: FrameProps) {
 
           <C.HeaderSection>
             <div style={{ position: 'relative' }} onClick={handleSwitch}>
-              <input type="search" name="" placeholder="Pesquisar" id="" />
+              <input
+                ref={inputRef}
+                type="search"
+                name=""
+                placeholder="Pesquisar"
+                id=""
+              />
               <span
                 style={{
                   position: 'absolute',

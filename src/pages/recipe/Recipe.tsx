@@ -101,11 +101,6 @@ function Recipe() {
             plugins: {
               legend: {
                 display: false,
-                labels: {
-                  font: {
-                    family: 'Bricolage Grotesque',
-                  },
-                },
               },
               title: {
                 display: false,
@@ -118,6 +113,11 @@ function Recipe() {
                 },
                 border: {
                   display: false,
+                },
+                ticks: {
+                  font: {
+                    family: 'Bricolage Grotesque',
+                  },
                 },
               },
               y: {
