@@ -8,12 +8,17 @@ import * as C from './Frame.styles';
 
 import { Link } from 'react-router-dom';
 import Sidebar from './components/Sidebar/Sidebar';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
+import Modal from '../Modal';
+import useModal from '../../hooks/modal';
 
 type FrameProps = {
   children: React.ReactNode;
 };
 
 function Frame({ children }: FrameProps) {
+  const { isShown, handleSwitch } = useModal();
+
   return (
     <C.Container>
       <Sidebar />
@@ -27,7 +32,7 @@ function Frame({ children }: FrameProps) {
           </C.OptionBar>
 
           <C.HeaderSection>
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative' }} onClick={handleSwitch}>
               <input type="search" name="" placeholder="Pesquisar" id="" />
               <span
                 style={{
@@ -55,7 +60,11 @@ function Frame({ children }: FrameProps) {
         </C.Header>
 
         <C.Group>
-          <C.Main>{children}</C.Main>
+          <C.Main>
+            <Breadcrumb />
+            {children}
+          </C.Main>
+
           <C.Utils>
             <header
               style={{
@@ -80,6 +89,20 @@ function Frame({ children }: FrameProps) {
           </C.Utils>
         </C.Group>
       </C.Content>
+
+      <Modal
+        isShown={isShown}
+        hide={handleSwitch}
+        modalContent={
+          <>
+            <input
+              type="text"
+              placeholder="Pesquisar no transparência"
+              autoFocus
+            />
+          </>
+        }
+      />
     </C.Container>
   );
 }

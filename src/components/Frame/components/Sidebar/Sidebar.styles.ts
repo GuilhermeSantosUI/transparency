@@ -7,19 +7,26 @@ export const Container = styled.div`
   padding: 20px;
 
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  flex-flow: column;
 
   border-right: 1px solid #f2f2f2;
-
-  img {
-    width: 160px;
-  }
 
   p {
     font-size: 13px;
     margin-bottom: 4px;
     color: #8c8c8c;
+  }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-flow: column;
+
+  gap: 10px;
+
+  img {
+    width: 160px;
   }
 
   a {

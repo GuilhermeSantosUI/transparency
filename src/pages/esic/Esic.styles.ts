@@ -2,16 +2,36 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   a {
+    width: 100%;
+    max-width: 420px;
+
     padding: 10px;
 
     display: flex;
-    gap: 16px;
+    flex-flow: column;
+    gap: 10px;
 
-    border: 1px solid #e3e3e3;
+    border: 1px solid #e9e8ea;
     border-radius: 6px;
+
+    background: #fafafa;
   }
 
-  p {
-    color: #8c8c8c;
+  p,
+  svg {
+    color: #3c4149;
+    fill: #3c4149;
   }
+`;
+
+export const GridModules = styled.div`
+  width: 100%;
+
+  padding: 16px 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 10px));
+  grid-template-rows: 1fr;
+
+  gap: 10px;
 `;

@@ -58,7 +58,7 @@ export const Content = styled.main`
 
 export const Main = styled.main`
   width: 100%;
-  padding: 24px 12px;
+  padding: 0 12px;
 `;
 
 export const Group = styled.div`

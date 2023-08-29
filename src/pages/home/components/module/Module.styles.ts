@@ -14,11 +14,20 @@ export const Container = styled(Link)`
   justify-content: space-between;
 
   padding: 10px;
+  color: #1e1e1e;
 
   p {
     font-size: 14px;
     color: #8c8c8c;
 
     margin-top: 10px;
+  }
+
+  svg {
+    transition: all 0.2s;
+  }
+
+  &:hover svg {
+    margin-left: 10px;
   }
 `;

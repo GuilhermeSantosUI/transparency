@@ -22,7 +22,8 @@
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.12.1",
     "styled-components": "^5.3.10",
-    "swiper": "^10.2.0"
+    "swiper": "^10.2.0",
+    "use-react-router-breadcrumbs": "^4.0.1"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",

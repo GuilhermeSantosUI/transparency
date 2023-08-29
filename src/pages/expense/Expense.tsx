@@ -123,6 +123,7 @@ function Expense() {
                 display: false,
               },
             },
+
             scales: {
               x: {
                 grid: {
@@ -130,6 +131,11 @@ function Expense() {
                 },
                 border: {
                   display: false,
+                },
+                ticks: {
+                  font: {
+                    family: 'Bricolage Grotesque',
+                  },
                 },
               },
               y: {
