@@ -4,7 +4,7 @@ import {
   CircleHalf,
   Translate,
 } from '@phosphor-icons/react';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import * as C from './Frame.styles';
 
 import { Link } from 'react-router-dom';
@@ -23,7 +23,7 @@ function Frame({ children }: FrameProps) {
 
   /* const keyDownHandler = (e: KeyboardEvent) => {
     e.preventDefault();
-
+s
     if (e.altKey && e.key === 'k') {
       inputRef.current?.click();
     }
