@@ -6,6 +6,10 @@ export const Container = styled.div`
 
   display: flex;
   overflow-y: auto;
+
+  a {
+    color: #1e1e1e;
+  }
 `;
 
 export const Header = styled.header`

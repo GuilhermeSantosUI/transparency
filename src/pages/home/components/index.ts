@@ -1,4 +1,5 @@
+import Banner from './banner/Banner';
 import Investment from './investment/Investiment';
 import Module from './module/Module';
 
-export { Module, Investment };
+export { Banner, Investment, Module };

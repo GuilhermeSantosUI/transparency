@@ -51,6 +51,10 @@ export default createGlobalStyle`${css`
 
   a {
     text-decoration: none;
+
+    :hover {
+      text-decoration: underline;
+    }
   }
 
   ul {
