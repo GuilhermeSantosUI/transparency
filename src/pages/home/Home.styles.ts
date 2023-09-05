@@ -8,6 +8,15 @@ export const Content = styled.div`
   display: flex;
   flex-flow: column;
   gap: 16px;
+
+  input {
+    padding: 8px;
+    padding-right: 20px;
+    border-radius: 6px;
+
+    border: 1px solid #f2f2f2;
+    font-size: 14px;
+  }
 `;
 
 export const GridModules = styled.div`

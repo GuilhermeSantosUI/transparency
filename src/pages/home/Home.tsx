@@ -1,4 +1,8 @@
-import { Cardholder, CurrencyDollar } from '@phosphor-icons/react';
+import {
+  CalendarBlank,
+  Cardholder,
+  CurrencyDollar,
+} from '@phosphor-icons/react';
 import * as C from './Home.styles';
 import { Banner, Investment, Module } from './components';
 
@@ -13,9 +17,29 @@ function Home() {
       <C.Content>
         <Banner />
 
-        <div>
-          <h3>Balanço total</h3>
-          <h2>R$ 5.216.403.750,45</h2>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+          <div>
+            <h3>Balanço total</h3>
+            <h2>R$ 5.216.403.750,45</h2>
+          </div>
+
+          <div style={{ position: 'relative' }}>
+            <input type="text" placeholder="Jan 1 2022 - Jan 1 2023" disabled />
+            <span
+              style={{
+                position: 'absolute',
+                right: 10,
+                top: '50%',
+                transform: 'translateY(-50%)',
+              }}>
+              <CalendarBlank color="#757575" />
+            </span>
+          </div>
         </div>
 
         <div style={{ display: 'flex', gap: 16 }}>

@@ -70,12 +70,21 @@ function Banner() {
 
           <div style={{ display: 'flex', gap: 10 }}>
             <button
-              style={{ display: 'flex', padding: 10, borderRadius: '50%' }}>
-              <CaretLeft />
+              style={{
+                padding: 10,
+                display: 'flex',
+                borderRadius: 6,
+              }}>
+              <CaretLeft color="#757575" />
             </button>
+
             <button
-              style={{ display: 'flex', padding: 10, borderRadius: '50%' }}>
-              <CaretRight />
+              style={{
+                padding: 10,
+                display: 'flex',
+                borderRadius: 6,
+              }}>
+              <CaretRight color="#757575" />
             </button>
           </div>
         </div>

@@ -8,9 +8,12 @@ export const Container = styled.div`
 
   margin: 12px 0 24px;
 
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  &,
+  div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
 
   background: #fafafa;
 

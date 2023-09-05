@@ -11,11 +11,11 @@ function Breadcrumb() {
 
   return (
     <C.Container>
-      {breadcrumbs.map(({ match, breadcrumb }) => (
-        <>
+      {breadcrumbs.map(({ match, breadcrumb }, i) => (
+        <div key={i}>
           <Link to={match.pathname}>{breadcrumb}</Link>
           <CaretRight size={10} />
-        </>
+        </div>
       ))}
     </C.Container>
   );
