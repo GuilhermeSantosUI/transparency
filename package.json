@@ -12,6 +12,7 @@
   "dependencies": {
     "@phosphor-icons/react": "^2.0.10",
     "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.0.4",
     "chart.js": "^4.3.3",
     "faker": "^6.6.6",
     "pwa-asset-generator": "^6.3.1",

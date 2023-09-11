@@ -1,4 +1,4 @@
-import { ArrowElbowRight } from '@phosphor-icons/react';
+import { IconProps } from '@phosphor-icons/react';
 import { Line } from 'react-chartjs-2';
 import * as C from './Investment.styles';
 
@@ -12,8 +12,9 @@ import {
   Title,
   Tooltip,
 } from 'chart.js';
-
-import { faker } from '@faker-js/faker';
+import Modal from '../../../../components/Modal';
+import useModal from '../../../../hooks/modal';
+import Details from './components/Details';
 
 ChartJS.register(
   CategoryScale,
@@ -25,121 +26,122 @@ ChartJS.register(
   Legend,
 );
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
-      borderColor: '#2bd45d',
-      backgroundColor: '#89eca6',
-      tension: 0.1,
-    },
-  ],
-};
-
 interface IInvestment {
+  icon: React.ComponentType<IconProps>;
   name: string;
   value: string;
+  data: {
+    labels: string[];
+    datasets: {
+      data: number[];
+      borderColor: string;
+      backgroundColor: string;
+      tension: number;
+    }[];
+  };
 }
 
-function Investment({ name, value }: IInvestment) {
+function Investment({ icon: Icon, name, value, data }: IInvestment) {
+  const { isShown, handleSwitch } = useModal();
+
   return (
-    <C.Container>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-        }}>
+    <>
+      <C.Container onClick={handleSwitch}>
         <div
           style={{
+            width: '100%',
             display: 'flex',
-            flexFlow: 'column',
+            justifyContent: 'flex-end',
+          }}>
+          <Line
+            width={150}
+            height={80}
+            options={{
+              responsive: false,
+              plugins: {
+                tooltip: {
+                  enabled: false,
+                },
+                legend: {
+                  display: false,
+                },
+                subtitle: {
+                  display: false,
+                },
+                title: {
+                  display: false,
+                },
+              },
+              scales: {
+                x: {
+                  grid: {
+                    color: 'transparent',
+                  },
+                  border: {
+                    display: false,
+                  },
+                  ticks: {
+                    display: false,
+                  },
+                },
+                y: {
+                  grid: {
+                    color: 'transparent',
+                  },
+                  border: {
+                    display: false,
+                  },
+                  ticks: {
+                    display: false,
+                  },
+                },
+              },
+              elements: {
+                bar: {
+                  borderRadius: 6,
+                },
+              },
+            }}
+            data={data}
+          />
+        </div>
+
+        <div
+          style={{
+            height: '100%',
+            display: 'flex',
             justifyContent: 'space-between',
           }}>
           <div
             style={{
               display: 'flex',
-              alignItems: 'center',
-              gap: 4,
+              flexFlow: 'column',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
             }}>
-            <p>{name}</p>
-
-            <span
+            <div
               style={{
+                height: '100%',
                 display: 'flex',
-                gap: 2,
-                padding: 4,
-                borderRadius: 4,
-                backgroundColor: '#e8f9f1',
+                flexFlow: 'column',
+                justifyContent: 'space-between',
+                gap: 4,
               }}>
-              <p>2,15%</p>
-              <ArrowElbowRight />
-            </span>
+              {Icon && <Icon size={22} />}
+              <p>{name}</p>
+            </div>
+
+            <h2>{value}</h2>
           </div>
-
-          <h2>{value}</h2>
         </div>
+      </C.Container>
 
-        <Line
-          width={80}
-          height={80}
-          options={{
-            responsive: false,
-            plugins: {
-              tooltip: {
-                enabled: false,
-              },
-              legend: {
-                display: false,
-              },
-              subtitle: {
-                display: false,
-              },
-              title: {
-                display: false,
-              },
-            },
-            scales: {
-              x: {
-                grid: {
-                  color: 'transparent',
-                },
-                border: {
-                  display: false,
-                },
-                ticks: {
-                  display: false,
-                },
-              },
-              y: {
-                grid: {
-                  color: 'transparent',
-                },
-                border: {
-                  display: false,
-                },
-                ticks: {
-                  display: false,
-                },
-              },
-            },
-            elements: {
-              bar: {
-                borderRadius: 6,
-              },
-            },
-          }}
-          data={data}
-        />
-      </div>
-
-      <p>
-        Investimento de <span>R$ 100.000</span> semana passada
-      </p>
-    </C.Container>
+      <Modal
+        isShown={isShown}
+        hide={handleSwitch}
+        modalContent={<Details name={name} />}
+      />
+    </>
   );
 }
 

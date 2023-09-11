@@ -16,6 +16,15 @@ export const Container = styled(Link)`
   padding: 10px;
   color: #1e1e1e;
 
+  background: linear-gradient(#ffffff, #fcfcfc);
+  transition: background 0.3s ease-out;
+
+  background-size: 1px 200px;
+
+  &:hover {
+    background-position: 100px;
+  }
+
   p {
     font-size: 14px;
     color: #8c8c8c;

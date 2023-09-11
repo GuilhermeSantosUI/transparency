@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
+interface IWrapper {
+  verticalPosition?: number;
+}
+
 export const appearFromTop = keyframes`
   from {
     opacity: 0;
@@ -11,9 +15,12 @@ export const appearFromTop = keyframes`
   }
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<IWrapper>`
   position: fixed;
-  top: 15%;
+
+  top: ${({ verticalPosition }) =>
+    verticalPosition ? `${verticalPosition}%` : '50%'};
+
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 700;
@@ -55,13 +62,7 @@ export const HeaderText = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 25px;
-  max-height: 30rem;
-
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  text-align: center;
+  padding: 24px;
 
   display: flex;
   align-items: center;

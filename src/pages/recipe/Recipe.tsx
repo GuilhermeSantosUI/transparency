@@ -6,6 +6,7 @@ import {
   CaretRight,
   CaretUpDown,
   Circle,
+  MagnifyingGlassPlus,
 } from '@phosphor-icons/react';
 
 import {
@@ -49,6 +50,7 @@ const data = {
 };
 
 import * as C from './Recipe.styles';
+import { Link } from 'react-router-dom';
 
 function Recipe() {
   return (
@@ -128,7 +130,9 @@ function Recipe() {
                   display: false,
                 },
                 ticks: {
-                  display: false,
+                  font: {
+                    family: 'Bricolage Grotesque',
+                  },
                 },
               },
             },
@@ -141,8 +145,12 @@ function Recipe() {
         />
 
         <div style={{ padding: '32px 0' }}>
-          <h3>Receita por</h3>
-          <h2>Categoria Econômica</h2>
+          <C.ContentHeader>
+            <div>
+              <h4>Receita por</h4>
+              <h3>Categoria Econômica</h3>
+            </div>
+          </C.ContentHeader>
 
           <table>
             <tr>
@@ -151,56 +159,80 @@ function Recipe() {
               <th>Realizado</th>
             </tr>
             <tr>
-              <td>Receitas Correntes </td>
+              <td>
+                <Link to="detalhes">Receitas Correntes</Link>
+              </td>
               <td>R$ 1.726.485.596</td>
               <td>R$ 246.427.817</td>
             </tr>
             <tr>
-              <td>Receitas de Capital </td>
+              <td>
+                <Link to="detalhes">Receitas de Capital</Link>
+              </td>
               <td>R$ 1.421.113.221</td>
               <td>R$ 1.390.256.634</td>
             </tr>
             <tr>
-              <td>Receitas Correntes Intra Orçamentárias </td>
+              <td>
+                <Link to="detalhes">
+                  Receitas Correntes Intra Orçamentárias
+                </Link>
+              </td>
               <td>R$ 444.770.838</td>
               <td>R$ 337.411.387</td>
             </tr>
             <tr>
-              <td>Rec. Cap. Intra Orçamentárias </td>
+              <td>
+                <Link to="detalhes">Rec. Cap. Intra Orçamentárias</Link>
+              </td>
               <td>R$ 392.670.623</td>
               <td>R$ 331.267.085</td>
             </tr>
             <tr>
-              <td>Recursos Arrecadados em Exercícios Anteriores </td>
+              <td>
+                <Link to="detalhes">
+                  Recursos Arrecadados em Exercícios Anteriores
+                </Link>
+              </td>
               <td>R$ 421.704.213</td>
               <td>R$ 246.427.817</td>
             </tr>
             <tr>
-              <td>Encargos Especiais</td>
+              <td>
+                <Link to="detalhes">Encargos Especiais</Link>
+              </td>
               <td>R$ 331.267.085</td>
               <td>R$ 337.411.387</td>
             </tr>
 
             <tr>
-              <td>Administração</td>
+              <td>
+                <Link to="detalhes">Administração</Link>
+              </td>
               <td>R$ 392.670.623,60 </td>
               <td>R$ 348.586.100,69 </td>
             </tr>
 
             <tr>
-              <td>Comércio e Serviços</td>
+              <td>
+                <Link to="detalhes">Comércio e Serviços</Link>
+              </td>
               <td>R$ 239.696.793,31 </td>
               <td>R$ 217.868.716,93 </td>
             </tr>
 
             <tr>
-              <td>Assistência Social</td>
+              <td>
+                <Link to="detalhes">Assistência Social</Link>
+              </td>
               <td>R$ 179.644.596,39 </td>
               <td>R$ 174.690.624,48</td>
             </tr>
 
             <tr>
-              <td> Comunicações</td>
+              <td>
+                <Link to="detalhes">Comunicações</Link>
+              </td>
               <td>R$ 102.391.633,98 </td>
               <td>R$ 81.766.827,92</td>
             </tr>

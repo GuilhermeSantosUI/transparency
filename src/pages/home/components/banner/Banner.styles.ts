@@ -10,6 +10,13 @@ export const Container = styled.div`
 
   clip-path: content-box;
 
+  padding: 24px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  gap: 10px;
+
   img {
     border-radius: 10px 0 0 10px;
   }
@@ -17,13 +24,4 @@ export const Container = styled.div`
   p {
     color: #8c8c8c;
   }
-`;
-
-export const Content = styled.div`
-  padding: 24px;
-
-  display: flex;
-  flex-flow: column;
-  justify-content: end;
-  gap: 10px;
 `;

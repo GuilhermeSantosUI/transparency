@@ -1,17 +1,26 @@
 import {
   ArrowRight,
+  ArrowUpRight,
+  Cardholder,
   CaretDown,
   CircleHalf,
+  CurrencyDollar,
+  HandFist,
+  Handshake,
   Translate,
 } from '@phosphor-icons/react';
 import { useRef } from 'react';
 import * as C from './Frame.styles';
+
+import * as Tabs from '@radix-ui/react-tabs';
 
 import { Link } from 'react-router-dom';
 import useModal from '../../hooks/modal';
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import Modal from '../Modal';
 import Sidebar from './components/Sidebar/Sidebar';
+import { NavLink } from 'react-router-dom';
+import Footer from './components/footer/Footer';
 
 type FrameProps = {
   children: React.ReactNode;
@@ -74,6 +83,9 @@ s
             <Link to="">
               <CircleHalf size={18} />
             </Link>
+            <Link to="">
+              <HandFist size={18} />
+            </Link>
 
             <Link to="">Ir ao site</Link>
           </C.HeaderSection>
@@ -83,29 +95,211 @@ s
           <C.Main>
             <Breadcrumb />
             {children}
+            <Footer />
           </C.Main>
 
           <C.Utils>
-            <header
+            <div
               style={{
                 position: 'sticky',
+                top: 20,
                 display: 'flex',
                 flexFlow: 'column',
-                gap: 10,
-                top: 30,
+                gap: 16,
               }}>
-              <p>Links Uteis</p>
+              <header
+                style={{
+                  display: 'flex',
+                  flexFlow: 'column',
+                  gap: 10,
+                }}>
+                <p>Links Uteis</p>
 
-              <Link to="">
-                IBGE <ArrowRight size={12} />
-              </Link>
-              <Link to="">
-                E-mail <ArrowRight size={12} />
-              </Link>
-              <Link to="">
-                Banese <ArrowRight size={12} />
-              </Link>
-            </header>
+                <Link to="">
+                  IBGE <ArrowRight size={12} />
+                </Link>
+                <Link to="">
+                  E-mail <ArrowRight size={12} />
+                </Link>
+                <Link to="">
+                  Banese <ArrowRight size={12} />
+                </Link>
+              </header>
+
+              <header
+                style={{
+                  display: 'flex',
+                  flexFlow: 'column',
+                  gap: 10,
+                }}>
+                <div
+                  style={{
+                    height: 35,
+                    display: 'flex',
+                    flexFlow: 'column',
+                  }}>
+                  <p>Acesso Rapido</p>
+
+                  <Tabs.Root defaultValue="tab1">
+                    <Tabs.List
+                      aria-label="Manage your account"
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 10,
+                        borderRadius: 6,
+                        backgroundColor: '#f9f9f9',
+                        marginBottom: 14,
+                      }}>
+                      <Tabs.Trigger
+                        value="tab1"
+                        style={{
+                          padding: 6,
+                          background: '#e3e3e3',
+                          width: '100%',
+                          display: 'flex',
+                          borderRadius: 8,
+                          justifyContent: 'center',
+                          fontSize: 14,
+                        }}>
+                        Modulos
+                      </Tabs.Trigger>
+
+                      <Tabs.Trigger
+                        value="tab2"
+                        style={{
+                          padding: 6,
+                          width: '100%',
+                          display: 'flex',
+                          borderRadius: 8,
+                          justifyContent: 'center',
+                          background: 'transparent',
+                          fontSize: 14,
+                        }}>
+                        e-SIC
+                      </Tabs.Trigger>
+                    </Tabs.List>
+
+                    <Tabs.Content value="tab1">
+                      <NavLink
+                        to="/despesa"
+                        className={({ isActive, isPending }) =>
+                          isPending
+                            ? 'pending'
+                            : isActive
+                            ? 'teste active'
+                            : 'teste'
+                        }>
+                        <Cardholder size={18} /> Despesa
+                      </NavLink>
+
+                      <NavLink
+                        to="/receita"
+                        className={({ isActive, isPending }) =>
+                          isPending
+                            ? 'pending'
+                            : isActive
+                            ? 'teste active'
+                            : 'teste'
+                        }>
+                        <CurrencyDollar size={18} /> Receita
+                      </NavLink>
+
+                      <NavLink
+                        to="/contratos"
+                        className={({ isActive, isPending }) =>
+                          isPending
+                            ? 'pending'
+                            : isActive
+                            ? 'teste active'
+                            : 'teste'
+                        }>
+                        <Handshake size={18} /> Contratos
+                      </NavLink>
+
+                      <br />
+
+                      <p>
+                        Os modulos mais acessados são calculados globalmente,
+                        não por individuo.
+                      </p>
+                    </Tabs.Content>
+
+                    <Tabs.Content value="tab2">
+                      <div
+                        style={{
+                          display: 'flex',
+                          flexFlow: 'column',
+                          gap: 10,
+                        }}>
+                        <div>
+                          <label htmlFor="newPassword">E-mail</label> <br />
+                          <input
+                            id="newPassword"
+                            placeholder="Insira aqui seu E-mail"
+                            type="email"
+                          />
+                        </div>
+
+                        <div>
+                          <label htmlFor="confirmPassword">Senha</label> <br />
+                          <input
+                            id="confirmPassword"
+                            placeholder="Insira aqui sua senha"
+                            type="password"
+                          />
+                          <a
+                            style={{
+                              fontSize: 14,
+                              cursor: 'pointer',
+                            }}>
+                            Esqueci minha senha
+                          </a>
+                        </div>
+
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexFlow: 'column',
+                            gap: 6,
+                          }}>
+                          <button
+                            style={{
+                              padding: 10,
+                              width: '100%',
+                              borderRadius: 6,
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
+                              backgroundColor: '#306dff',
+                              border: '1px solid #306dff',
+
+                              color: '#ffffff',
+                            }}>
+                            Entrar
+                            <ArrowUpRight size={16} />
+                          </button>
+
+                          <button
+                            style={{
+                              padding: 10,
+                              width: '100%',
+                              borderRadius: 6,
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              backgroundColor: 'transparent',
+                              border: '1px solid #e3e3e3',
+                            }}>
+                            Criar conta
+                          </button>
+                        </div>
+                      </div>
+                    </Tabs.Content>
+                  </Tabs.Root>
+                </div>
+              </header>
+            </div>
           </C.Utils>
         </C.Group>
       </C.Content>
@@ -113,6 +307,7 @@ s
       <Modal
         isShown={isShown}
         hide={handleSwitch}
+        verticalPosition={15}
         modalContent={
           <>
             <input

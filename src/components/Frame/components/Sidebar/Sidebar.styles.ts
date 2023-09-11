@@ -33,9 +33,19 @@ export const Content = styled.div`
     font-size: 14px;
     padding: 8px;
 
+    border-radius: 8px;
+
     display: flex;
     align-items: center;
     gap: 6px;
+
+    &:hover {
+      background: #f9f9f9;
+    }
+  }
+
+  .active {
+    background: #f9f9f9;
   }
 
   a,

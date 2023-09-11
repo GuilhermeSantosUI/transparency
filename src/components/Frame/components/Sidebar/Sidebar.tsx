@@ -10,8 +10,7 @@ import {
   Smiley,
 } from '@phosphor-icons/react';
 
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 import * as C from './Sidebar.styles';
 
 function Sidebar() {
@@ -36,45 +35,109 @@ function Sidebar() {
         <p>Transparência</p>
 
         <div>
-          <Link to="">
+          <NavLink
+            to="/"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }>
             <HouseSimple size={18} /> Ínicio
-          </Link>
+          </NavLink>
 
-          <Link to="">
+          <NavLink
+            to="/licitacoes"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }>
             <CurrencyDollar size={18} /> Licitações
-          </Link>
+          </NavLink>
 
-          <Link to="">
+          <NavLink
+            to="/legislacao"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }>
             <Bank size={18} /> Legislação
-          </Link>
+          </NavLink>
 
-          <Link to="esic">
+          <NavLink
+            to="/esic"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }>
             <AppWindow size={18} /> eSIC
-          </Link>
+          </NavLink>
 
-          <Link to="">
+          <NavLink
+            to="/lgpd"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }>
             <Gavel size={18} /> LGPD
-          </Link>
+          </NavLink>
 
-          <Link to="">
+          <NavLink
+            to="/estrutura-organizacional"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }>
             <HardDrives size={18} /> Estrutura <br /> Organizacional
-          </Link>
+          </NavLink>
         </div>
 
         <p>Mais opções</p>
 
         <div>
-          <Link to="">
+          <NavLink
+            to="/pesquisa-satisfacao"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }>
             <Smiley size={18} /> Pesquisa de
             <br /> satisfação
-          </Link>
+          </NavLink>
 
-          <Link to="">
+          <NavLink
+            to="/perguntas-frequentes"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }>
             <Question size={18} /> Perguntas <br /> Frequentes
-          </Link>
+          </NavLink>
         </div>
       </C.Content>
-      <p>Desenvolvido por Ágape Sistemas</p>
+      <div style={{ textAlign: 'center' }}>
+        <p>Desenvolvido por Ágape Sistemas</p>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            borderRadius: 6,
+            backgroundColor: '#f9f9f9',
+          }}>
+          <div
+            style={{
+              padding: 6,
+              background: '#e3e3e3',
+              width: '100%',
+              display: 'flex',
+              borderRadius: 8,
+              justifyContent: 'center',
+            }}>
+            Claro
+          </div>
+          <div
+            style={{
+              padding: 6,
+              width: '100%',
+              display: 'flex',
+              borderRadius: 8,
+              justifyContent: 'center',
+            }}>
+            Escuro
+          </div>
+        </div>
+      </div>
     </C.Container>
   );
 }

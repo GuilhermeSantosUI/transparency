@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.button`
   width: 100%;
+  height: fit-content;
 
   display: flex;
   flex-flow: column;
@@ -10,15 +11,13 @@ export const Container = styled.div`
   padding: 10px;
 
   border-radius: 6px;
+  background-color: #306dff;
   border: 1px solid #e3e3e3;
 
-  p {
-    font-size: 14px;
-    color: #8c8c8c;
-  }
+  color: #ffffff;
 
-  span {
-    color: #2bd45d;
+  p {
+    font-size: 16px;
   }
 
   canvas {

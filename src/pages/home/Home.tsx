@@ -2,21 +2,71 @@ import {
   CalendarBlank,
   Cardholder,
   CurrencyDollar,
+  GraduationCap,
+  Heartbeat,
+  Tree,
+  UsersThree,
 } from '@phosphor-icons/react';
 import * as C from './Home.styles';
 import { Banner, Investment, Module } from './components';
 
+import { faker } from '@faker-js/faker';
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+const data1 = {
+  labels,
+  datasets: [
+    {
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      borderColor: '#fff',
+      backgroundColor: '#e3e3e3',
+      tension: 0.1,
+    },
+  ],
+};
+
+const data2 = {
+  labels,
+  datasets: [
+    {
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      borderColor: '#fff',
+      backgroundColor: '#e3e3e3',
+      tension: 0.1,
+    },
+  ],
+};
+
+const data3 = {
+  labels,
+  datasets: [
+    {
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      borderColor: '#fff',
+      backgroundColor: '#e3e3e3',
+      tension: 0.1,
+    },
+  ],
+};
+
+const data4 = {
+  labels,
+  datasets: [
+    {
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      borderColor: '#fff',
+      backgroundColor: '#e3e3e3',
+      tension: 0.1,
+    },
+  ],
+};
+
 function Home() {
   return (
     <C.Container>
-      <div>
-        <h3>Bem-vindo ao novo</h3>
-        <h2>Portal da transparência</h2>
-      </div>
-
+      <Banner />
       <C.Content>
-        <Banner />
-
         <div
           style={{
             display: 'flex',
@@ -43,18 +93,46 @@ function Home() {
         </div>
 
         <div style={{ display: 'flex', gap: 16 }}>
-          <Investment name="Educação" value="R$ 1.526.355.905,42" />
-          <Investment name="Assistencia Social" value="R$ 194.365.729,12" />
-        </div>
+          <Investment
+            icon={GraduationCap}
+            name="Educação"
+            value="R$ +1.5 Bi"
+            data={data1}
+          />
 
-        <div style={{ display: 'flex', gap: 16 }}>
-          <Investment name="Saúde" value="R$ 1.740.044.328,11" />
-          <Investment name="Urbanismo" value="R$ 1.455.637.791,80" />
+          <Investment
+            icon={UsersThree}
+            name="Assistência Social"
+            value="R$ +200 Mil"
+            data={data2}
+          />
+
+          <Investment
+            icon={Heartbeat}
+            name="Saúde"
+            value="R$ +1.7 Bi"
+            data={data3}
+          />
+
+          <Investment
+            icon={Tree}
+            name="Urbanismo"
+            value="R$ +1.5 Bi"
+            data={data4}
+          />
         </div>
 
         <h3>Módulos</h3>
 
         <C.GridModules>
+          <Module to="/despesa" title="Despesa" icon={Cardholder} />
+          <Module to="/receita" title="Receita" icon={CurrencyDollar} />
+          <Module to="/despesa" title="Despesa" icon={Cardholder} />
+          <Module to="/receita" title="Receita" icon={CurrencyDollar} />
+          <Module to="/despesa" title="Despesa" icon={Cardholder} />
+          <Module to="/receita" title="Receita" icon={CurrencyDollar} />
+          <Module to="/despesa" title="Despesa" icon={Cardholder} />
+          <Module to="/receita" title="Receita" icon={CurrencyDollar} />
           <Module to="/despesa" title="Despesa" icon={Cardholder} />
           <Module to="/receita" title="Receita" icon={CurrencyDollar} />
         </C.GridModules>

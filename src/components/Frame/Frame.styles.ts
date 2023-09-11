@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const Header = styled.header`
   width: 100%;
 
-  padding: 10px 12px;
+  padding: 10px 16px;
 
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,7 @@ export const Content = styled.main`
 
 export const Main = styled.main`
   width: 100%;
-  padding: 0 12px;
+  padding: 0 20px;
 `;
 
 export const Group = styled.div`
@@ -71,14 +71,45 @@ export const Group = styled.div`
 `;
 
 export const Utils = styled.aside`
-  width: 300px;
+  width: 340px;
   height: 100%;
 
   display: flex;
   flex-flow: column;
   gap: 10px;
 
-  padding: 10px;
+  padding: 16px;
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+
+    border: 1px solid #f2f2f2;
+  }
+
+  .teste {
+    font-size: 14px;
+    padding: 8px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &:hover {
+      background: #f9f9f9;
+    }
+  }
+
+  .teste.active {
+    background: #f9f9f9;
+  }
 
   p {
     font-size: 13px;
