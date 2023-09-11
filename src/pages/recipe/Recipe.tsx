@@ -6,7 +6,6 @@ import {
   CaretRight,
   CaretUpDown,
   Circle,
-  MagnifyingGlassPlus,
 } from '@phosphor-icons/react';
 
 import {
@@ -49,8 +48,8 @@ const data = {
   ],
 };
 
-import * as C from './Recipe.styles';
 import { Link } from 'react-router-dom';
+import * as C from './Recipe.styles';
 
 function Recipe() {
   return (
