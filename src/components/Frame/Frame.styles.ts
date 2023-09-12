@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -115,5 +116,15 @@ export const Utils = styled.aside`
     font-size: 13px;
     margin-bottom: 4px;
     color: #8c8c8c;
+  }
+`;
+
+export const LinkTo = styled(Link)`
+  svg {
+    transition: all 0.2s;
+  }
+
+  &:hover svg {
+    margin-left: 5px;
   }
 `;

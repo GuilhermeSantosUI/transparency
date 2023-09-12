@@ -37,6 +37,18 @@ export const Content = styled.div`
     font-size: 14px;
   }
 
+  svg {
+    transition: all 0.2s;
+  }
+
+  td:last-child {
+    cursor: pointer;
+  }
+
+  td:hover svg {
+    margin-left: 10px;
+  }
+
   span {
     display: flex;
   }

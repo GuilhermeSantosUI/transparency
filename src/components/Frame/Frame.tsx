@@ -117,15 +117,18 @@ s
                 }}>
                 <p>Links Uteis</p>
 
-                <Link to="">
+                <C.LinkTo to="">
                   IBGE <ArrowRight size={12} />
-                </Link>
-                <Link to="">
+                </C.LinkTo>
+                <C.LinkTo to="">
                   E-mail <ArrowRight size={12} />
-                </Link>
-                <Link to="">
+                </C.LinkTo>
+                <C.LinkTo to="">
                   Banese <ArrowRight size={12} />
-                </Link>
+                </C.LinkTo>
+                <C.LinkTo to="">
+                  Mais Links <ArrowRight size={12} />
+                </C.LinkTo>
               </header>
 
               <header

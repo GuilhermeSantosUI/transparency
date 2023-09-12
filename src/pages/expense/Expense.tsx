@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   CalendarBlank,
   CaretDoubleLeft,
   CaretDoubleRight,
@@ -224,7 +225,7 @@ function Expense() {
                     background: 'transparent',
                     fontSize: 14,
                   }}>
-                  Covid19
+                  Gráfico
                 </Tabs.Trigger>
               </Tabs.List>
             </div>
@@ -634,6 +635,9 @@ function Expense() {
                   <td>R$ 1.726.485.596</td>
                   <td>R$ 1.229.849.823</td>
                   <td>R$ 246.427.817</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -642,6 +646,9 @@ function Expense() {
                   <td>R$ 1.421.113.221</td>
                   <td>R$ 1.390.256.634</td>
                   <td>R$ 1.512.112.981</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -650,6 +657,9 @@ function Expense() {
                   <td>R$ 1.201.939.920</td>
                   <td>R$ 444.770.838</td>
                   <td>R$ 337.411.387</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -658,6 +668,9 @@ function Expense() {
                   <td>R$ 392.670.623</td>
                   <td>R$ 348.586.100</td>
                   <td>R$ 331.267.085</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -666,6 +679,9 @@ function Expense() {
                   <td>R$ 421.704.213</td>
                   <td>R$ 299.615.909</td>
                   <td>R$ 246.427.817</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
                 <tr>
                   <td>
@@ -674,6 +690,9 @@ function Expense() {
                   <td>R$ 331.267.085</td>
                   <td>R$ 444.770.838</td>
                   <td>R$ 337.411.387</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
 
                 <tr>
@@ -683,6 +702,9 @@ function Expense() {
                   <td>R$ 392.670.623,60 </td>
                   <td>R$ 348.586.100,69 </td>
                   <td>R$ 331.267.085,46</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
 
                 <tr>
@@ -692,6 +714,9 @@ function Expense() {
                   <td>R$ 239.696.793,31 </td>
                   <td>R$ 217.868.716,93 </td>
                   <td>R$ 214.929.253,70</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
 
                 <tr>
@@ -701,6 +726,9 @@ function Expense() {
                   <td>R$ 191.561.651,26 </td>
                   <td>R$ 179.644.596,39 </td>
                   <td>R$ 174.690.624,48</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
 
                 <tr>
@@ -710,6 +738,9 @@ function Expense() {
                   <td>R$ 102.391.633,98 </td>
                   <td>R$ 82.893.896,08 </td>
                   <td>R$ 81.766.827,92</td>
+                  <td style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ArrowRight />
+                  </td>
                 </tr>
               </table>
 

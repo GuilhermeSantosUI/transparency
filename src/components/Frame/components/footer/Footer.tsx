@@ -120,11 +120,21 @@ function Footer() {
             alignItems: 'center',
             gap: 2,
           }}>
-          <FacebookLogo size={20} />
-          <InstagramLogo size={20} />
-          <LinkedinLogo size={20} />
-          <TwitterLogo size={20} />
-          <YoutubeLogo size={20} />
+          <Link to="">
+            <FacebookLogo size={20} />
+          </Link>
+          <Link to="">
+            <InstagramLogo size={20} />
+          </Link>
+          <Link to="">
+            <LinkedinLogo size={20} />
+          </Link>
+          <Link to="">
+            <TwitterLogo size={20} />
+          </Link>
+          <Link to="">
+            <YoutubeLogo size={20} />
+          </Link>
         </div>
       </C.CreatorContent>
     </C.Container>
