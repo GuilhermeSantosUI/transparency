@@ -23,7 +23,7 @@ export const GridModules = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 10px));
+  grid-template-columns: repeat(auto-fill, minmax(146px, 10px));
   grid-template-rows: 1fr;
 
   gap: 10px;
