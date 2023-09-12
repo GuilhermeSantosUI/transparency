@@ -46,7 +46,7 @@ export const FormSearch = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 10px));
+  grid-template-columns: repeat(auto-fill, minmax(190px, 10px));
   grid-template-rows: 1fr;
 
   padding: 1rem 0;

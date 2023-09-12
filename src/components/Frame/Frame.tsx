@@ -1,10 +1,12 @@
 import {
   ArrowRight,
   ArrowUpRight,
+  CalendarBlank,
   Cardholder,
   CaretDown,
   CircleHalf,
   CurrencyDollar,
+  File,
   HandFist,
   Handshake,
   Translate,
@@ -217,6 +219,29 @@ s
                         <Handshake size={18} /> Contratos
                       </NavLink>
 
+                      <NavLink
+                        to="/diario-oficial"
+                        className={({ isActive, isPending }) =>
+                          isPending
+                            ? 'pending'
+                            : isActive
+                            ? 'teste active'
+                            : 'teste'
+                        }>
+                        <CalendarBlank size={18} /> Diario oficial
+                      </NavLink>
+
+                      <NavLink
+                        to="/folha-pagamento"
+                        className={({ isActive, isPending }) =>
+                          isPending
+                            ? 'pending'
+                            : isActive
+                            ? 'teste active'
+                            : 'teste'
+                        }>
+                        <File size={18} /> Folha de pagamento
+                      </NavLink>
                       <br />
 
                       <p>
