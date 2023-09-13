@@ -72,7 +72,7 @@ export const Group = styled.div`
 `;
 
 export const Utils = styled.aside`
-  width: 340px;
+  width: 380px;
   height: 100%;
 
   display: flex;

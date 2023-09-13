@@ -9,6 +9,8 @@ import {
   Home,
   Recipe,
 } from '../pages';
+import Licitacao from '../pages/licitacao/Licitacao';
+import Legislacao from '../pages/legislacao/Legislacao';
 
 function Routes() {
   return (
@@ -17,6 +19,8 @@ function Routes() {
         {/*  <Route path="/" element={<Navigate replace to="home" />} /> */}
 
         <Route path="/" element={<Home />} />
+        <Route path="/licitacoes" element={<Licitacao />} />
+        <Route path="/legislacao" element={<Legislacao />} />
         <Route path="sobre" element={<About />} />
         <Route path="guia" element={<Guide />} />
 

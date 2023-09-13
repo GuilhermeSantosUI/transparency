@@ -30,7 +30,7 @@ export const GridModules = styled.div`
   padding: 16px 0;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(390px, 10px));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 10px));
   grid-template-rows: 1fr;
 
   gap: 10px;

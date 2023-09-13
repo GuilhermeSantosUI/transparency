@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
-
-export const Content = styled.div`
-  padding: 24px 0;
-
-  display: flex;
-  flex-flow: column;
-  gap: 16px;
-
+export const Container = styled.div`
   input {
     padding: 8px;
     padding-right: 20px;
@@ -17,6 +9,14 @@ export const Content = styled.div`
     border: 1px solid #f2f2f2;
     font-size: 14px;
   }
+`;
+
+export const Content = styled.div`
+  padding: 24px 0;
+
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
 `;
 
 export const GridModules = styled.div`

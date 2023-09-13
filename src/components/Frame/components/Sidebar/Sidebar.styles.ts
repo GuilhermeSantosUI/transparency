@@ -10,6 +10,7 @@ export const Container = styled.div`
   justify-content: space-between;
   flex-flow: column;
 
+  background: #f9f9f9;
   border-right: 1px solid #f2f2f2;
 
   p {
@@ -40,12 +41,12 @@ export const Content = styled.div`
     gap: 6px;
 
     &:hover {
-      background: #f9f9f9;
+      background: #efeded;
     }
   }
 
   .active {
-    background: #f9f9f9;
+    background: #efeded;
   }
 
   a,

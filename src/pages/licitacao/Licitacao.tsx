@@ -1,21 +1,12 @@
 import {
-  Bank,
-  Calculator,
   CalendarBlank,
   Cardholder,
-  ChartLine,
   CurrencyDollar,
-  Gavel,
   GraduationCap,
-  Handshake,
   Heartbeat,
-  Pen,
-  Syringe,
   Tree,
   UsersThree,
 } from '@phosphor-icons/react';
-import * as C from './Home.styles';
-import { Banner, Investment, Module } from './components';
 
 import { faker } from '@faker-js/faker';
 
@@ -69,7 +60,10 @@ const data4 = {
   ],
 };
 
-function Home() {
+import * as C from '../home/Home.styles';
+import { Banner, Investment, Module } from '../home/components';
+
+function Licitacao() {
   return (
     <C.Container>
       <Banner />
@@ -129,46 +123,23 @@ function Home() {
           />
         </div>
 
-        <h3>Combate à Covid19</h3>
+        <h3>Módulos</h3>
 
         <C.GridModules>
           <Module to="/despesa" title="Despesa" icon={Cardholder} />
           <Module to="/receita" title="Receita" icon={CurrencyDollar} />
-          <Module to="/licitacoes" title="Licitações" icon={Gavel} />
-          <Module to="/licitacoes" title="Contratos" icon={Handshake} />
-          <Module to="/licitacoes" title="Legislação" icon={Bank} />
-          <Module
-            to="/licitacoes"
-            title="Combate Covid (Vacinação)"
-            icon={Syringe}
-          />
-        </C.GridModules>
-
-        <h3>Execução Orçamentária</h3>
-
-        <C.GridModules>
           <Module to="/despesa" title="Despesa" icon={Cardholder} />
           <Module to="/receita" title="Receita" icon={CurrencyDollar} />
-          <Module to="/licitacoes" title="Empenhos" icon={Gavel} />
-          <Module to="/licitacoes" title="Licitações" icon={Handshake} />
-          <Module to="/licitacoes" title="Pagamentos" icon={Bank} />
-          <Module
-            to="/licitacoes"
-            title="Plano de ação (Siafic)"
-            icon={Syringe}
-          />
-        </C.GridModules>
-
-        <h3>Orçamento</h3>
-
-        <C.GridModules>
-          <Module to="/despesa" title="PPA" icon={Pen} />
-          <Module to="/receita" title="LDO" icon={ChartLine} />
-          <Module to="/licitacoes" title="LOA" icon={Calculator} />
+          <Module to="/despesa" title="Despesa" icon={Cardholder} />
+          <Module to="/receita" title="Receita" icon={CurrencyDollar} />
+          <Module to="/despesa" title="Despesa" icon={Cardholder} />
+          <Module to="/receita" title="Receita" icon={CurrencyDollar} />
+          <Module to="/despesa" title="Despesa" icon={Cardholder} />
+          <Module to="/receita" title="Receita" icon={CurrencyDollar} />
         </C.GridModules>
       </C.Content>
     </C.Container>
   );
 }
 
-export default Home;
+export default Licitacao;

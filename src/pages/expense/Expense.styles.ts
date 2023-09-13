@@ -52,13 +52,21 @@ export const Content = styled.div`
   span {
     display: flex;
   }
+
+  td {
+    font-size: 14px;
+  }
+
+  td:first-child {
+    width: 250px;
+  }
 `;
 
 export const FormSearch = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 10px));
+  grid-template-columns: repeat(auto-fill, minmax(186px, 10px));
   grid-template-rows: 1fr;
 
   padding: 1rem 0;
