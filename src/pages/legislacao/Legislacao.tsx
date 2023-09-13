@@ -66,8 +66,7 @@ import { Banner, Investment, Module } from '../home/components';
 function Legislacao() {
   return (
     <C.Container>
-      <Banner />
-      <C.Content>
+      <div style={{ display: 'flex', flexFlow: 'column', gap: 16 }}>
         <div
           style={{
             display: 'flex',
@@ -122,6 +121,10 @@ function Legislacao() {
             data={data4}
           />
         </div>
+      </div>
+
+      <C.Content>
+        <Banner />
 
         <h3>Módulos</h3>
 
